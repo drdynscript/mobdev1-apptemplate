@@ -1,9 +1,7 @@
-$color-blue-light: rgba(197,202,233 ,1);
-$color-blue-dark: rgba(26,35,126 ,1);
-$color-green-dark: rgba(27,94,32 ,1);  
-$color-orange-dark: rgba(230,81,0 ,1);
+// 1. Variables
+@import 
+    'abstracts/variables';
 
-body {
-    color: $color-blue-light;
-    background: $color-orange-dark;
-}
+// 2. Base
+@import 
+    'base/typography';
