@@ -2,6 +2,8 @@ var gulp        = require('gulp');
 var gulpSass    = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
+var gulpBabel   = require('gulp-babel');
+
 // Static Server & watching scss / html files
 gulp.task('serve', function() {
     browserSync.init({
@@ -25,6 +27,13 @@ gulp.task('sass', function() {
         .pipe(gulpSass())
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.stream());
+});
+
+// Compile ES6 into JS
+gulp.task('es6', function() {
+    return gulp.src('app/es6/**/*.js')
+        .pipe(gulpBabel())
+        .pipe(gulp.dest('app/js'));
 });
 
 // Default Task
