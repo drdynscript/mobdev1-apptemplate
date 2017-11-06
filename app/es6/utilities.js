@@ -1,1 +1,1 @@
-xdsd
+'use strict';

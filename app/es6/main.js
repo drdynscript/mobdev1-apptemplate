@@ -4,12 +4,11 @@ import { YaHooWeatherService } from './services'
 
 class App {
   constructor() {
-
-    console.log('Initialize the application sss.');
+    console.log('Constructor of the App class.');
   }
 
   init = () => {
-    console.log('Initialize the application sss.');
+    console.log('Initialize the application.');
   }
 }
 window.addEventListener('load', () => {
