@@ -18,6 +18,7 @@ gulp.task('serve', function() {
     });
 
     gulp.watch('app/scss/*.scss', ['sass']);
+    gulp.watch('app/es6/**/*.js', ['es6']);
     gulp.watch('app/*.html').on('change', browserSync.reload)
 });
 
@@ -33,7 +34,8 @@ gulp.task('sass', function() {
 gulp.task('es6', function() {
     return gulp.src('app/es6/**/*.js')
         .pipe(gulpBabel())
-        .pipe(gulp.dest('app/js'));
+        .pipe(gulp.dest('app/js'))
+        .pipe(browserSync.stream());
 });
 
 // Default Task
