@@ -1,5 +1,9 @@
-$color-1: #ff6600;
+$color-blue-light: rgba(197,202,233 ,1);
+$color-blue-dark: rgba(26,35,126 ,1);
+$color-green-dark: rgba(27,94,32 ,1);  
+$color-orange-dark: rgba(230,81,0 ,1);
 
 body {
-    color: $color-1;
+    color: $color-blue-light;
+    background: $color-orange-dark;
 }

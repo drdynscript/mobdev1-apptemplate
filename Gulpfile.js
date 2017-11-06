@@ -16,11 +16,16 @@ gulp.task('serve', function() {
     });
 
     gulp.watch('app/scss/*.scss', ['sass']);
+    gulp.watch('app/*.html').on('change', browserSync.reload)
 });
 
 // Compile sass into CSS
 gulp.task('sass', function() {
     return gulp.src('app/scss/*.scss')
         .pipe(gulpSass())
-        .pipe(gulp.dest('app/css'));
+        .pipe(gulp.dest('app/css'))
+        .pipe(browserSync.stream());
 });
+
+// Default Task
+gulp.task('default', ['serve']);
