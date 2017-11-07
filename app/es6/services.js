@@ -9,7 +9,7 @@ export class YaHooWeatherService {
   constructor() {
   }
 
-  loadWeatherForWoeid = (woeid, unit) => {
+  loadWeatherForWoeid(woeid, unit) {
     const URL = this.URL_WOEID.format(woeid, unit);
     return Ajax.loadJsonByPromise(URL);
   }

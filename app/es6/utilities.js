@@ -16,7 +16,7 @@ if (!String.prototype.format) {
 // Ajax class
 export class Ajax {
 
-    static loadJsonByPromise = (url) => {
+    static loadJsonByPromise(url) {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
@@ -36,7 +36,7 @@ export class Ajax {
         });
     }
 
-    static loadJsonPByPromise = (url) => {
+    static loadJsonPByPromise(url) {
         return new Promise((resolve, reject) => {
             var name = 'jsonp' + new Date().getTime();
             if (url.match(/\?/)) url += '&callback='+name;

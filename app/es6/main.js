@@ -7,7 +7,7 @@ class App {
     console.log('Constructor of the App class.');
   }
 
-  init = () => {
+  init() {
     console.log('Initialize the application.');
 
     // Variables
@@ -23,7 +23,7 @@ class App {
     this.loadWeatherDataForWoeid(12591774); // woeid from ghent
   }
 
-  loadWeatherDataForWoeid = (woeid) => {
+  loadWeatherDataForWoeid(woeid) {
     this._yahooWeatherService.loadWeatherForWoeid(woeid, 'c')
       .then((data) => {
           this._weatherData = data;
@@ -36,7 +36,7 @@ class App {
       });
   }
 
-  updateWeatherUI = () => {
+  updateWeatherUI() {
     if(this._mainContainer != null && this._mainContainer != undefined && this._weatherData != null) {
         let tempStr = '';
         tempStr += `
